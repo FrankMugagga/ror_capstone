@@ -1,0 +1,31 @@
+<% if category.icon.present? %>
+<img src="<%= category.icon %>" alt="<%= category.name %>" , class='category_image'>
+<% else %>
+<p>No image available</p>
+<% end %>
+
+<div class='cat_cont2'>
+  <div class='cat_cont_det'>
+  <a href="/categories/<%= category.id %>">
+  <%= category.name %>  
+</a>
+
+<div>
+  <strong>$<%= category.expenses.sum(:amount) %> </strong>
+</div>
+  
+
+
+<a href="<%= category_path(category) %>"
+data-turbo-method='delete'
+data-turbo-confirm='Are you sure?'
+data-method='delete'
+>REMOVE</a> 
+  </div>
+
+  <div class='cat_time'>
+<%= category.created_at.strftime('%d %B %Y') %>
+</div>  
+
+</div>
+
