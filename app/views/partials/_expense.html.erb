@@ -1,0 +1,18 @@
+<div class='expense_partial'>
+  <div class='expense_det'>
+
+<div> <%= expense.name %> </div>
+<div> <strong>$ <%= expense.amount %> </strong></div>
+
+<a href="<%= category_expense_path(@category, expense) %>"
+data-turbo-method='delete'
+data-turbo-confirm='Are you sure?'
+data-method='delete'
+>Remove</a>
+  </div>
+
+  <div class='expense_date'>
+  <%= expense.created_at.strftime('%d %B %Y') %>
+  </div>
+</div>
+    

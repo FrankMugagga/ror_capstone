@@ -1,0 +1,19 @@
+<h1>Expenses</h1>
+
+<div>Total: <%= @total_amount %></div>
+<%=  %>
+<ul>
+  <%  @expenses.each do |expense| %>   
+    <li>
+      <%= render partial: 'partials/expense', locals: { expense:expense } %>
+      <% expense.categories.each do |category| %>
+        <div>category: </div><%= category.name %>
+      <% end %>
+    </li>    
+  <% end %>
+  
+</ul>
+
+
+
+
