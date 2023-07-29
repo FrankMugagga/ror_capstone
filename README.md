@@ -63,9 +63,13 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-LIVE DEMO 
+## 🚀 Live Demo <a name="live-demo"></a>
 
-Video Presentation
+- [Live Demo Link]( https://easyfinance.onrender.com/)
+
+## Video demo <a name="live-demo"></a>
+
+- [video Link]()
 
 <!-- GETTING STARTED -->
 
