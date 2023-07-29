@@ -2,11 +2,11 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.includes(:author).all
     @user = current_user
+    @category = Category.new
   end
 
   def show
     @user = current_user
-
     @category = @user.categories.includes(:author, :expenses).find(params[:id])
 
     render :show

@@ -1,4 +1,7 @@
+<% if user_signed_in? %>
+
 <section class='logged_in_user_form'>
+
   <nav class='navbar'>
     <div class='menu' onclick='toggleMenu()'> menu</div>
     <h1>CATEGORIES</h1>
@@ -9,6 +12,13 @@
   </nav>
 
   <ul class='page_body'>
+
+  <% if @categories.empty? %>
+    <li>
+    <%= link_to 'New CATEGORY', new_category_path, class:'add_button' %>
+    </li>
+  <% end %>
+
     <% @categories.each do |category| %> 
       <li class='category_cont'>
         <%=render partial: 'partials/category', locals: { category: category, author: @user } %>
@@ -39,3 +49,5 @@ function closeMenu() {
 
 
 </script>
+
+<% end %>

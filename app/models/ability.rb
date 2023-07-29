@@ -4,10 +4,12 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, :all
-
+    
     return unless user.present?
+    can :read, Category, author_id: user.id
     can :manage, Category, author_id: user.id
-    can :manage, Expense, author_id: user.id
+
+    can :read, Expense, category: { author_id: user.id }
+    can :manage, Expense, category: { author_id: user.id }
   end
 end
