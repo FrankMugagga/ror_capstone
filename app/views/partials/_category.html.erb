@@ -15,13 +15,15 @@
 </div>
   
 
-
+<% if current_user.present? && can? (:destroy, category) %>
 <a href="<%= category_path(category) %>"
 data-turbo-method='delete'
 data-turbo-confirm='Are you sure?'
 data-method='delete'
 >REMOVE</a> 
   </div>
+
+  <% end %>
 
   <div class='cat_time'>
 <%= category.created_at.strftime('%d %B %Y') %>
