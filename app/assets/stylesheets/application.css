@@ -111,6 +111,8 @@ a {
   border: none;
   font-size: 20px;
   border-radius: 20px 0 20px 0;
+  padding: 10px;
+
 }
 
 .forgot_link {
