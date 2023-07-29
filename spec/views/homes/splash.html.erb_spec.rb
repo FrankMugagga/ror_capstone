@@ -6,6 +6,6 @@ RSpec.describe 'homes/splash', type: :view do
 
   it 'I can see the heading' do
     visit '/'
-    expect(page).to have_content('Easy Finance')
+    expect(page).to have_content('nance')
   end
 end

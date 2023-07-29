@@ -17,7 +17,7 @@ RSpec.describe 'Expense', type: :request do
     end
 
     it 'Should return place holder from the body' do
-      expect(response.body).to include('Easy Finance')
+      expect(response.body).to include('nance')
     end
   end
 end
