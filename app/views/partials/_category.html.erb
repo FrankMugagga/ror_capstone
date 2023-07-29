@@ -15,7 +15,7 @@
 </div>
   
 
-<% if current_user.present? && can? (:destroy, category) %>
+<% if current_user.present? && can?(:destroy, category) %>
 <a href="<%= category_path(category) %>"
 data-turbo-method='delete'
 data-turbo-confirm='Are you sure?'

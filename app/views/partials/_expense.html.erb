@@ -4,7 +4,7 @@
 <div> <%= expense.name %> </div>
 <div> <strong>$ <%= expense.amount %> </strong></div>
 
-<% if current_user.present? && can? (:destroy, expense) %>
+<% if current_user.present? && can?(:destroy, expense) %>
 <a href="<%= category_expense_path(@category, expense) %>"
 data-turbo-method='delete'
 data-turbo-confirm='Are you sure?'
