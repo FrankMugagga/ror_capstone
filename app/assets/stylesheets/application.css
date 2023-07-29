@@ -52,12 +52,11 @@ body {
 
 .firstl {
   color: green;
-  size: 10px;
 }
 
 .splash_word {
   width: 200px;
-  font-family:cursive;
+  font-family: cursive;
   border: 2px solid green;
   border-top-left-radius: 30px;
   border-right: none;
@@ -66,7 +65,6 @@ body {
   border-top-width: 20px;
   border-bottom-width: 10px;
   border-right-width: 5px;
-
 }
 
 .splash_links {
@@ -109,7 +107,6 @@ body {
   color: #434b54;
 }
 
-
 .login_header {
   width: 98%;
   height: 10vh;
@@ -124,10 +121,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.login {
-  color: white;
 }
 
 .login_container {
@@ -227,7 +220,7 @@ a {
   align-items: center;
 }
 
-.add_button_cont ,
+.add_button_cont,
 .add_txn {
   background: green;
   width: 100%;
