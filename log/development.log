@@ -21281,3 +21281,1486 @@ Processing by CategoriesController#index as TURBO_STREAM
 Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 1.0ms | Allocations: 7552)
 
 
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:15:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 1.1ms | Allocations: 594)
+  Rendered layout layouts/application.html.erb (Duration: 61.5ms | Allocations: 49949)
+Completed 200 OK in 70ms (Views: 63.1ms | ActiveRecord: 0.0ms | Allocations: 55047)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 19:15:36 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 246)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 592)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 4900)
+  Rendered layout layouts/application.html.erb (Duration: 41.0ms | Allocations: 39534)
+Completed 200 OK in 54ms (Views: 44.3ms | ActiveRecord: 2.5ms | Allocations: 50510)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 19:15:36 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1631)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 3754)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 4302)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-07-29 19:15:58 +0300
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"zed", "email"=>"zed@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "zed@g.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 891)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 597)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 5524)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 7758)
+Completed 422 Unprocessable Entity in 263ms (Views: 13.6ms | ActiveRecord: 5.4ms | Allocations: 22544)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-07-29 19:16:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"ben", "email"=>"ben@g.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ben@g.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "ben"], ["created_at", "2023-07-29 16:16:26.896210"], ["updated_at", "2023-07-29 16:16:26.896210"], ["email", "ben@g.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 225ms (ActiveRecord: 11.0ms | Allocations: 20104)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:16:26 +0300
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.5ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 12.8ms | Allocations: 8870)
+  Rendered categories/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 14848)
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 49692)
+Completed 200 OK in 74ms (Views: 56.3ms | ActiveRecord: 6.0ms | Allocations: 56848)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2023-07-29 19:16:31 +0300
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/new.html.erb within layouts/application (Duration: 15.8ms | Allocations: 1915)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 4073)
+Completed 200 OK in 22ms (Views: 18.8ms | ActiveRecord: 0.4ms | Allocations: 5742)
+
+
+Started POST "/categories/create" for 127.0.0.1 at 2023-07-29 19:17:39 +0300
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Housing", "icon"=>"https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80", "author_id"=>"2"}, "commit"=>"Create Category"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:24:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:24:in `create'
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Housing"], ["icon", "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"], ["author_id", 2], ["created_at", "2023-07-29 16:17:39.505387"], ["updated_at", "2023-07-29 16:17:39.505387"]]
+  ↳ app/controllers/categories_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:24:in `create'
+Redirected to http://127.0.0.1:3000/categories
+Completed 302 Found in 12ms (ActiveRecord: 1.6ms | Allocations: 6396)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-07-29 19:17:39 +0300
+Processing by CategoriesController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 1.7ms | Allocations: 1121)
+  [1m[36mExpense Sum (0.2ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 1.9ms | Allocations: 1080)
+  Rendered categories/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 4934)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 7099)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.3ms | Allocations: 8754)
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2023-07-29 19:17:45 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["author_id", 2], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mHABTM_Expenses Load (0.2ms)[0m  [1m[34mSELECT "expense_categories".* FROM "expense_categories" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/categories/show.html.erb:14
+  [1m[36mExpense Load (0.5ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 4]]
+  ↳ app/views/categories/show.html.erb:18
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 2022)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4146)
+Completed 200 OK in 16ms (Views: 7.9ms | ActiveRecord: 1.8ms | Allocations: 8972)
+
+
+Started GET "/categories/4/expenses/new" for 127.0.0.1 at 2023-07-29 19:17:47 +0300
+Processing by ExpensesController#new as HTML
+  Parameters: {"category_id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:39:in `set_category'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/expenses_controller.rb:39:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/expenses/new.html.erb:25:in `map'
+  Rendered expenses/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2499)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4701)
+Completed 200 OK in 15ms (Views: 5.8ms | ActiveRecord: 0.8ms | Allocations: 10972)
+
+
+Started POST "/categories/4/expenses" for 127.0.0.1 at 2023-07-29 19:18:00 +0300
+Processing by ExpensesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "expense"=>{"name"=>"one bed room", "amount"=>"1234", "category_id"=>"4"}, "commit"=>"Create expense", "category_id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:39:in `set_category'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/expenses_controller.rb:39:in `set_category'
+  [1m[36mCACHE Category Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/expenses_controller.rb:15:in `create'
+  [1m[36mExpense Create (0.6ms)[0m  [1m[32mINSERT INTO "expenses" ("name", "amount", "author_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "one bed room"], ["amount", "1234.0"], ["author_id", 2], ["created_at", "2023-07-29 16:18:00.288264"], ["updated_at", "2023-07-29 16:18:00.288264"]]
+  ↳ app/controllers/expenses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (10.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/expenses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/expenses_controller.rb:16:in `create'
+  [1m[36mCategory::HABTM_Expenses Create (0.6ms)[0m  [1m[32mINSERT INTO "expense_categories" ("expense_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["expense_id", 6], ["category_id", 4], ["created_at", "2023-07-29 16:18:00.363071"], ["updated_at", "2023-07-29 16:18:00.363071"]]
+  ↳ app/controllers/expenses_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/expenses_controller.rb:16:in `create'
+Redirected to http://127.0.0.1:3000/categories/4
+Completed 302 Found in 87ms (ActiveRecord: 16.2ms | Allocations: 11901)
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2023-07-29 19:18:00 +0300
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["author_id", 2], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mHABTM_Expenses Load (0.2ms)[0m  [1m[34mSELECT "expense_categories".* FROM "expense_categories" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.2ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/categories/show.html.erb:14
+  [1m[36mExpense Load (0.3ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 4]]
+  ↳ app/views/categories/show.html.erb:18
+  Rendered partials/_expense.html.erb (Duration: 0.6ms | Allocations: 463)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2277)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 4436)
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 1.4ms | Allocations: 9801)
+
+
+Started DELETE "/categories/4/expenses/6" for 127.0.0.1 at 2023-07-29 19:18:05 +0300
+Processing by ExpensesController#destroy as TURBO_STREAM
+  Parameters: {"category_id"=>"4", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:39:in `set_category'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/expenses_controller.rb:39:in `set_category'
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:27:in `destroy'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/expenses_controller.rb:27:in `destroy'
+  [1m[36mExpense Load (0.3ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 AND "expenses"."id" = $2 LIMIT $3[0m  [["category_id", 4], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:28:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/expenses_controller.rb:29:in `destroy'
+  [1m[36mExpense::HABTM_Categories Delete All (0.5ms)[0m  [1m[31mDELETE FROM "expense_categories" WHERE "expense_categories"."expense_id" = $1[0m  [["expense_id", 6]]
+  ↳ app/controllers/expenses_controller.rb:29:in `destroy'
+  [1m[36mExpense Destroy (0.4ms)[0m  [1m[31mDELETE FROM "expenses" WHERE "expenses"."id" = $1[0m  [["id", 6]]
+  ↳ app/controllers/expenses_controller.rb:29:in `destroy'
+  [1m[36mTRANSACTION (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/expenses_controller.rb:29:in `destroy'
+Redirected to http://127.0.0.1:3000/categories/4
+Completed 302 Found in 19ms (ActiveRecord: 8.0ms | Allocations: 8527)
+
+
+Started GET "/categories/4" for 127.0.0.1 at 2023-07-29 19:18:05 +0300
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["author_id", 2], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mHABTM_Expenses Load (0.2ms)[0m  [1m[34mSELECT "expense_categories".* FROM "expense_categories" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.7ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/categories/show.html.erb:14
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 4]]
+  ↳ app/views/categories/show.html.erb:18
+  Rendered categories/show.html.erb within layouts/application (Duration: 11.9ms | Allocations: 4092)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 6312)
+Completed 200 OK in 43ms (Views: 11.1ms | ActiveRecord: 8.0ms | Allocations: 26099)
+
+
+Started GET "/categories" for 127.0.0.1 at 2023-07-29 19:18:08 +0300
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.5ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 2.8ms | Allocations: 1121)
+  [1m[36mExpense Sum (0.2ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 1.4ms | Allocations: 1063)
+  Rendered categories/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4880)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 7024)
+Completed 200 OK in 16ms (Views: 10.4ms | ActiveRecord: 2.2ms | Allocations: 8647)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-07-29 19:18:10 +0300
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.1ms | Allocations: 2457)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:18:10 +0300
+Processing by HomesController#splash as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.4ms | Allocations: 297)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2533)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 3266)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-07-29 19:18:22 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 712)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.8ms | Allocations: 13053)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 15253)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 16343)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:20:37 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.9ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 2558)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 3297)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-07-29 19:30:06 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 715)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.7ms | Allocations: 4409)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 54149)
+Completed 200 OK in 64ms (Views: 54.0ms | ActiveRecord: 1.9ms | Allocations: 65244)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-07-29 19:30:09 +0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 488)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 132)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1369)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3518)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 4058)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:30:15 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.4ms | Allocations: 305)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2531)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 3273)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:30:28 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3822)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 4084)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:31:28 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.4ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4340)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 5175)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:31:58 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.8ms | Allocations: 595)
+  Rendered layout layouts/application.html.erb (Duration: 48.7ms | Allocations: 50176)
+Completed 200 OK in 54ms (Views: 50.0ms | ActiveRecord: 0.0ms | Allocations: 55274)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-07-29 19:32:04 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 565)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2356)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4554)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 5573)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-07-29 19:32:12 +0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zed@g.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "zed@g.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 187ms (ActiveRecord: 0.5ms | Allocations: 13073)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:32:12 +0300
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.6ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 12.6ms | Allocations: 8973)
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 4.1ms | Allocations: 1054)
+  Rendered categories/index.html.erb within layouts/application (Duration: 24.5ms | Allocations: 15871)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 18085)
+Completed 200 OK in 41ms (Views: 28.4ms | ActiveRecord: 4.9ms | Allocations: 24545)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2023-07-29 19:32:19 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["author_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mHABTM_Expenses Load (0.1ms)[0m  [1m[34mSELECT "expense_categories".* FROM "expense_categories" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mExpense Load (0.3ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."id" IN ($1, $2)[0m  [["id", 1], ["id", 4]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:14
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:18
+  Rendered partials/_expense.html.erb (Duration: 0.5ms | Allocations: 465)
+  Rendered partials/_expense.html.erb (Duration: 0.1ms | Allocations: 128)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2845)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 4990)
+Completed 200 OK in 23ms (Views: 5.4ms | ActiveRecord: 2.7ms | Allocations: 15694)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2023-07-29 19:33:51 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["author_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mHABTM_Expenses Load (0.1ms)[0m  [1m[34mSELECT "expense_categories".* FROM "expense_categories" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."id" IN ($1, $2)[0m  [["id", 1], ["id", 4]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:14
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:18
+  Rendered partials/_expense.html.erb (Duration: 1.9ms | Allocations: 893)
+  Rendered partials/_expense.html.erb (Duration: 0.2ms | Allocations: 128)
+  Rendered categories/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4886)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 8733)
+Completed 200 OK in 69ms (Views: 10.5ms | ActiveRecord: 7.8ms | Allocations: 49157)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2023-07-29 19:33:58 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["author_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mHABTM_Expenses Load (0.1ms)[0m  [1m[34mSELECT "expense_categories".* FROM "expense_categories" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."id" IN ($1, $2)[0m  [["id", 1], ["id", 4]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.2ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:14
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:18
+  Rendered partials/_expense.html.erb (Duration: 0.3ms | Allocations: 193)
+  Rendered partials/_expense.html.erb (Duration: 0.1ms | Allocations: 128)
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2142)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 4266)
+Completed 200 OK in 10ms (Views: 3.9ms | ActiveRecord: 1.0ms | Allocations: 9559)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2023-07-29 19:35:48 +0300
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["author_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mHABTM_Expenses Load (0.2ms)[0m  [1m[34mSELECT "expense_categories".* FROM "expense_categories" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."id" IN ($1, $2)[0m  [["id", 1], ["id", 4]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.2ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:14
+  [1m[36mExpense Load (0.1ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:18
+  Rendered partials/_expense.html.erb (Duration: 0.3ms | Allocations: 193)
+  Rendered partials/_expense.html.erb (Duration: 0.1ms | Allocations: 128)
+  Rendered categories/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2142)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 5876)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 1.3ms | Allocations: 11153)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2023-07-29 19:36:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."author_id" = $1 AND "categories"."id" = $2 LIMIT $3[0m  [["author_id", 1], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mHABTM_Expenses Load (0.2ms)[0m  [1m[34mSELECT "expense_categories".* FROM "expense_categories" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  [1m[36mExpense Load (0.3ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" WHERE "expenses"."id" IN ($1, $2)[0m  [["id", 1], ["id", 4]]
+  ↳ app/controllers/categories_controller.rb:10:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:14
+  [1m[36mExpense Load (0.2ms)[0m  [1m[34mSELECT "expenses".* FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1 ORDER BY "expenses"."created_at" DESC[0m  [["category_id", 3]]
+  ↳ app/views/categories/show.html.erb:18
+  Rendered partials/_expense.html.erb (Duration: 1.4ms | Allocations: 899)
+  Rendered partials/_expense.html.erb (Duration: 0.2ms | Allocations: 128)
+  Rendered categories/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 5189)
+  Rendered layout layouts/application.html.erb (Duration: 69.8ms | Allocations: 54936)
+Completed 200 OK in 110ms (Views: 72.8ms | ActiveRecord: 8.4ms | Allocations: 90874)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:36:55 +0300
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 2.4ms | Allocations: 1504)
+  [1m[36mExpense Sum (0.3ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 1.7ms | Allocations: 1054)
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 5968)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 8100)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 1.2ms | Allocations: 8594)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:38:08 +0300
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.2ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 1.8ms | Allocations: 1504)
+  [1m[36mExpense Sum (0.1ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 1.0ms | Allocations: 1054)
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.1ms | Allocations: 5961)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 9673)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.8ms | Allocations: 10158)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:38:47 +0300
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 2.0ms | Allocations: 1137)
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 1.6ms | Allocations: 1051)
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 4893)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 8617)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 1.7ms | Allocations: 8940)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-07-29 19:39:05 +0300
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 4ms (ActiveRecord: 0.2ms | Allocations: 3121)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:39:05 +0300
+Processing by HomesController#splash as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2257)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 2567)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:39:59 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3809)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 4068)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:43:38 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.5ms | Allocations: 288)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4308)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 5142)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:43:51 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 3817)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 4077)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:44:11 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3813)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4075)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:44:31 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3810)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 4069)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:45:34 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.5ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4315)
+Completed 200 OK in 6ms (Views: 5.7ms | Allocations: 5150)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:46:27 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.6ms | Allocations: 292)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4312)
+Completed 200 OK in 7ms (Views: 6.0ms | Allocations: 5143)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:46:46 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.4ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 4354)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 5337)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:47:04 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.5ms | Allocations: 292)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2734)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 3568)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:47:15 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3819)
+Completed 200 OK in 4ms (Views: 3.8ms | Allocations: 4079)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:47:25 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 3813)
+Completed 200 OK in 12ms (Views: 11.4ms | Allocations: 4075)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:47:41 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 3813)
+Completed 200 OK in 4ms (Views: 3.5ms | Allocations: 4072)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:47:58 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3806)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 4065)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:48:05 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 1.9ms | Allocations: 2278)
+Completed 200 OK in 2ms (Views: 2.2ms | Allocations: 2537)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:48:35 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.8ms | Allocations: 601)
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 51149)
+Completed 200 OK in 64ms (Views: 59.6ms | Allocations: 56237)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:49:12 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.6ms | Allocations: 292)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4328)
+Completed 200 OK in 6ms (Views: 5.5ms | Allocations: 5160)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:49:27 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.4ms | Allocations: 292)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 4336)
+Completed 200 OK in 5ms (Views: 4.9ms | Allocations: 5168)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:51:02 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 3821)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 4081)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:51:11 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 3815)
+Completed 200 OK in 7ms (Views: 6.9ms | Allocations: 4075)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:51:17 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 2311)
+Completed 200 OK in 3ms (Views: 2.4ms | Allocations: 2571)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:51:40 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 3829)
+Completed 200 OK in 4ms (Views: 3.9ms | Allocations: 4088)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:52:03 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.2ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3840)
+Completed 200 OK in 7ms (Views: 6.2ms | Allocations: 4103)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:52:12 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 3837)
+Completed 200 OK in 4ms (Views: 3.7ms | Allocations: 4096)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:54:02 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 1.0ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4367)
+Completed 200 OK in 8ms (Views: 7.8ms | Allocations: 5202)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:54:44 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.4ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 2874)
+Completed 200 OK in 4ms (Views: 3.3ms | Allocations: 3708)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:55:09 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.4ms | Allocations: 295)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4361)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 5196)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:55:12 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 1.5ms | Allocations: 2234)
+Completed 200 OK in 2ms (Views: 1.8ms | Allocations: 2494)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:56:04 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.6ms | Allocations: 292)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 2883)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 3716)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:56:38 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.3ms | Allocations: 292)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 2733)
+Completed 200 OK in 3ms (Views: 2.8ms | Allocations: 3565)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:57:33 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.6ms | Allocations: 299)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2740)
+Completed 200 OK in 5ms (Views: 4.1ms | Allocations: 3573)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:57:54 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.6ms | Allocations: 303)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 4341)
+Completed 200 OK in 6ms (Views: 5.2ms | Allocations: 5175)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:58:24 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.5ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 2883)
+Completed 200 OK in 4ms (Views: 4.0ms | Allocations: 3715)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-07-29 19:58:34 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 716)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 4076)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 6278)
+Completed 200 OK in 25ms (Views: 8.4ms | ActiveRecord: 6.4ms | Allocations: 16379)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-07-29 19:58:44 +0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"zed@g.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "zed@g.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 183ms (ActiveRecord: 0.5ms | Allocations: 5596)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:58:44 +0300
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 32.5ms | Allocations: 8974)
+  [1m[36mExpense Sum (0.4ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 6.1ms | Allocations: 1054)
+  Rendered categories/index.html.erb within layouts/application (Duration: 45.8ms | Allocations: 15872)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 18086)
+Completed 200 OK in 58ms (Views: 47.3ms | ActiveRecord: 5.1ms | Allocations: 24491)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-07-29 19:58:53 +0300
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms | Allocations: 1526)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:58:53 +0300
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/views/categories/index.html.erb:16
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN ($1, $2)[0m  [["id", 1], ["id", 2]]
+  ↳ app/views/categories/index.html.erb:22
+  [1m[36mExpense Sum (0.2ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 3]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 1.4ms | Allocations: 1137)
+  [1m[36mExpense Sum (0.1ms)[0m  [1m[34mSELECT SUM("expenses"."amount") FROM "expenses" INNER JOIN "expense_categories" ON "expenses"."id" = "expense_categories"."expense_id" WHERE "expense_categories"."category_id" = $1[0m  [["category_id", 4]]
+  ↳ app/views/partials/_category.html.erb:14
+  Rendered partials/_category.html.erb (Duration: 0.9ms | Allocations: 1051)
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4898)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 7052)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.9ms | Allocations: 7378)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-07-29 19:58:56 +0300
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 6ms (ActiveRecord: 0.4ms | Allocations: 2484)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 19:58:56 +0300
+Processing by HomesController#splash as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.1ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2239)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 2508)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 20:00:05 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.5ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4350)
+Completed 200 OK in 6ms (Views: 5.3ms | Allocations: 5182)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 20:00:10 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 239)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 597)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 4368)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 6800)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 8282)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 20:01:24 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.6ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2883)
+Completed 200 OK in 6ms (Views: 5.3ms | Allocations: 3717)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 20:01:34 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 234)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 518)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 3194)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 5395)
+Completed 200 OK in 6ms (Views: 4.9ms | Allocations: 6602)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 20:01:42 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.3ms | Allocations: 93)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2224)
+Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 2487)
+
+
+Started GET "/" for 127.0.0.1 at 2023-07-29 20:02:43 +0300
+Processing by HomesController#splash as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/splash.html.erb within layouts/application
+  Rendered homes/splash.html.erb within layouts/application (Duration: 0.8ms | Allocations: 304)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4355)
+Completed 200 OK in 8ms (Views: 7.0ms | Allocations: 5188)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 20:02:46 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 11424)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 11513)
+Completed 500 Internal Server Error in 7ms (Allocations: 12492)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class='login_form'>
+
+<div class='login_header'> 
+
+  <div>
+    <%= link_to '/' do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+  </div> 
+
+  <h2>REGISTER</h2>
+  <div> 
+    <%= link_to "Sign up", class:'log_words' new_registration_path(resource_name) %><br />  
+  </div>
+</div>
+<br>
+
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html:{ class: 'login_container' }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name, style:'display:none' %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:'login_filed', placeholder:'Full Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, style:'display:none' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'login_filed', placeholder:'Email'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, style:'display:none' %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class:'login_filed', placeholder:'Password'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, style:'display:none' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'login_filed', placeholder:'Confirm password'  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class:'login_filed'  %>
+  </div> <br>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</section>
+
+
+):
+1:    <section class='login_form'>
+2:    
+3:    <div class='login_header'> 
+4:    
+5:      <div>
+6:        <%= link_to '/' do %>
+7:          <i class="fas fa-arrow-left"></i>
+8:        <% end %>
+9:      </div> 
+10:    
+11:      <h2>REGISTER</h2>
+12:      <div> 
+13:        <%= link_to "Sign up", class:'log_words' new_registration_path(resource_name) %><br />  
+14:      </div>
+15:    </div>
+16:    <br>
+17:    
+18:    
+19:    
+20:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html:{ class: 'login_container' }) do |f| %>
+21:      <%= render "devise/shared/error_messages", resource: resource %>
+22:    
+23:      <div class="field">
+24:        <%= f.label :name, style:'display:none' %><br />
+25:        <%= f.text_field :name, autofocus: true, autocomplete: "name", class:'login_filed', placeholder:'Full Name' %>
+26:      </div>
+27:    
+28:      <div class="field">
+29:        <%= f.label :email, style:'display:none' %><br />
+30:        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'login_filed', placeholder:'Email'  %>
+31:      </div>
+32:    
+33:      <div class="field">
+34:        <%= f.label :password, style:'display:none' %>
+35:        <% if @minimum_password_length %>
+36:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+37:        <% end %><br />
+38:        <%= f.password_field :password, autocomplete: "new-password", class:'login_filed', placeholder:'Password'  %>
+39:      </div>
+40:    
+41:      <div class="field">
+42:        <%= f.label :password_confirmation, style:'display:none' %><br />
+43:        <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'login_filed', placeholder:'Confirm password'  %>
+44:      </div>
+45:    
+46:      <div class="actions">
+47:        <%= f.submit "Sign up", class:'login_filed'  %>
+48:      </div> <br>
+49:    <% end %>
+50:    
+51:    <%= render "devise/shared/links" %>
+52:    
+53:    </section>
+  
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 20:03:05 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 1528)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 1617)
+Completed 500 Internal Server Error in 3ms (Allocations: 2822)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <section class='login_form'>
+
+<div class='login_header'> 
+
+  <div>
+    <%= link_to '/' do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+  </div> 
+
+  <h2>REGISTER</h2>
+  <div> 
+    <%= link_to "Sign up", class:'log_words', new_registration_path(resource_name) %><br />  
+  </div>
+</div>
+<br>
+
+
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html:{ class: 'login_container' }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name, style:'display:none' %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", class:'login_filed', placeholder:'Full Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email, style:'display:none' %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'login_filed', placeholder:'Email'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password, style:'display:none' %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password", class:'login_filed', placeholder:'Password'  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation, style:'display:none' %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'login_filed', placeholder:'Confirm password'  %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class:'login_filed'  %>
+  </div> <br>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+</section>
+
+
+):
+1:    <section class='login_form'>
+2:    
+3:    <div class='login_header'> 
+4:    
+5:      <div>
+6:        <%= link_to '/' do %>
+7:          <i class="fas fa-arrow-left"></i>
+8:        <% end %>
+9:      </div> 
+10:    
+11:      <h2>REGISTER</h2>
+12:      <div> 
+13:        <%= link_to "Sign up", class:'log_words', new_registration_path(resource_name) %><br />  
+14:      </div>
+15:    </div>
+16:    <br>
+17:    
+18:    
+19:    
+20:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html:{ class: 'login_container' }) do |f| %>
+21:      <%= render "devise/shared/error_messages", resource: resource %>
+22:    
+23:      <div class="field">
+24:        <%= f.label :name, style:'display:none' %><br />
+25:        <%= f.text_field :name, autofocus: true, autocomplete: "name", class:'login_filed', placeholder:'Full Name' %>
+26:      </div>
+27:    
+28:      <div class="field">
+29:        <%= f.label :email, style:'display:none' %><br />
+30:        <%= f.email_field :email, autofocus: true, autocomplete: "email", class:'login_filed', placeholder:'Email'  %>
+31:      </div>
+32:    
+33:      <div class="field">
+34:        <%= f.label :password, style:'display:none' %>
+35:        <% if @minimum_password_length %>
+36:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+37:        <% end %><br />
+38:        <%= f.password_field :password, autocomplete: "new-password", class:'login_filed', placeholder:'Password'  %>
+39:      </div>
+40:    
+41:      <div class="field">
+42:        <%= f.label :password_confirmation, style:'display:none' %><br />
+43:        <%= f.password_field :password_confirmation, autocomplete: "new-password", class:'login_filed', placeholder:'Confirm password'  %>
+44:      </div>
+45:    
+46:      <div class="actions">
+47:        <%= f.submit "Sign up", class:'login_filed'  %>
+48:      </div> <br>
+49:    <% end %>
+50:    
+51:    <%= render "devise/shared/links" %>
+52:    
+53:    </section>
+  
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:13: syntax error, unexpected ')', expecting =>
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 20:03:18 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 510)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3027)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5488)
+Completed 200 OK in 8ms (Views: 7.5ms | Allocations: 6716)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 20:04:27 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 224)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 1599)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4116)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 4205)
+Completed 500 Internal Server Error in 8ms (Allocations: 5430)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%- if controller_name != 'sessions' %>
+  <%= link_to "Log in", new_session_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "Sign up",class:'sha', new_registration_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+  <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false } %><br />
+  <% end %>
+<% end %>
+
+):
+1:    <%- if controller_name != 'sessions' %>
+2:      <%= link_to "Log in", new_session_path(resource_name) %><br />
+3:    <% end %>
+4:    
+5:    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+6:      <%= link_to "Sign up",class:'sha', new_registration_path(resource_name) %><br />
+7:    <% end %>
+8:    
+9:    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+10:      <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+11:    <% end %>
+12:    
+13:    <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+14:      <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+15:    <% end %>
+16:    
+17:    <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+18:      <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
+19:    <% end %>
+20:    
+21:    <%- if devise_mapping.omniauthable? %>
+22:      <%- resource_class.omniauth_providers.each do |provider| %>
+23:        <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false } %><br />
+24:      <% end %>
+25:    <% end %>
+  
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:54
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 20:04:47 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 224)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 1579)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 4094)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 4183)
+Completed 500 Internal Server Error in 4ms (Allocations: 5386)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%- if controller_name != 'sessions' %>
+  <%= link_to "Log in", new_session_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+  <%= link_to "Sign up" ,class:'sha', new_registration_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+  <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false } %><br />
+  <% end %>
+<% end %>
+
+):
+1:    <%- if controller_name != 'sessions' %>
+2:      <%= link_to "Log in", new_session_path(resource_name) %><br />
+3:    <% end %>
+4:    
+5:    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+6:      <%= link_to "Sign up" ,class:'sha', new_registration_path(resource_name) %><br />
+7:    <% end %>
+8:    
+9:    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+10:      <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+11:    <% end %>
+12:    
+13:    <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+14:      <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+15:    <% end %>
+16:    
+17:    <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+18:      <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
+19:    <% end %>
+20:    
+21:    <%- if devise_mapping.omniauthable? %>
+22:      <%- resource_class.omniauth_providers.each do |provider| %>
+23:        <%= button_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider), data: { turbo: false } %><br />
+24:      <% end %>
+25:    <% end %>
+  
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/shared/_links.html.erb:6: syntax error, unexpected ')', expecting =>
+app/views/devise/registrations/new.html.erb:54
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-07-29 20:04:58 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 224)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 510)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3023)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 7107)
+Completed 200 OK in 8ms (Views: 7.4ms | Allocations: 8332)
+
+
