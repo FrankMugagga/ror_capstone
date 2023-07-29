@@ -18,6 +18,13 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-weight: 300;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.fas {
+  width: 20px;
+  color: white;
 }
 
 .splash {
@@ -61,6 +68,9 @@ body {
   width: 100%;
   height: 10vh;
   text-decoration: none;
+  border: 2px solid #3778c2;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .login_signup:hover {
