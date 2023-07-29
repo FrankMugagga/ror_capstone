@@ -1,12 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Expense, type: :model do
-
   before do
-    @user = User.create(name:'lumbuye', email:'lumbuye@g.com', password:123456)
-    @category = @user.categories.create(name: 'Food', icon: 'food recipe.jpg')  
-    @expense = @category.expenses.create(name: 'food expense', amount: 1200, author_id:@user.id)
-    
+    @user = User.create(name: 'lumbuye', email: 'lumbuye@g.com', password: 123_456)
+    @category = @user.categories.create(name: 'Food', icon: 'food recipe.jpg')
+    @expense = @category.expenses.create(name: 'food expense', amount: 1200, author_id: @user.id)
   end
 
   it 'Should be valid if all forms are filled' do

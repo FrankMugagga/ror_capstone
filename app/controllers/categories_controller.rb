@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
 
   def show
     @user = current_user
-    
+
     @category = @user.categories.includes(:author, :expenses).find(params[:id])
 
     render :show

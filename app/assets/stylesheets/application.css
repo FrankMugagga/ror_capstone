@@ -276,13 +276,13 @@ a {
   top: 0;
   left: 0;
   background: #f9f9f9;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   padding: 12px;
   width: 50vw;
   height: 100vh;
 }
 
-.menu-content a{
+.menu-content a {
   display: block;
   text-decoration: none;
   color: #333;
