@@ -8,7 +8,9 @@ class ExpensesController < ApplicationController
   def create
     @expense = Expense.new(name: expense_params[:name], amount: expense_params[:amount])
     @expense.author = current_user
-    @category.id = expense_params[:category_id]
+    @category = Category.find(expense_params[:category_id])
+
+    #@category.id = expense_params[:category_id]
 
     if @expense.save
       @category.expenses << @expense
