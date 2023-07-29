@@ -1,0 +1,18 @@
+databases:
+  - name: ror_capstone
+    databaseName: ror_capstone_s9yi
+    user: ror_capstone_s9yi_user
+
+services:
+  - type: web
+    name: easyfinance
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: ror_capstone
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false

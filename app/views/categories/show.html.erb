@@ -1,0 +1,31 @@
+<section class='logged_in_user_form'>
+  <nav class='navbar'>
+    <div>
+      <%= link_to 'Back', categories_path %>
+    </div>
+
+    <h1>TRANSACTIONS</h1>
+
+    <div>Search</div>
+  </nav>
+
+  <div class='cat_txn_page'>
+    <div><%= @category.name %></div>
+    <div><%= @category.expenses.sum(:amount) %></div>
+ 
+  </div>
+  <ul class='page_body'>
+  <% @category.expenses.order(created_at: :desc).each do |expense| %>
+    <li class='category_cont'>
+    <%= render partial: 'partials/expense', locals: { expense: expense, category: @category } %>
+  </li>
+<% end %>
+</ul>
+
+ <div class='add_txn'>
+ <a class='add_txn_link' href="/categories/<%= @category.id %>/expenses/new">Create transaction</a>
+ </div>
+
+
+
+</section>

@@ -1,0 +1,307 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 300;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.fas {
+  width: 20px;
+  color: white;
+}
+
+.splash {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #f4f5f5;
+}
+
+.signup,
+.login,
+.splash_links,
+.spalsh_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spalsh_title {
+  width: 100%;
+  height: 70vh;
+  font-size: 80px;
+}
+
+.firstl {
+  color: green;
+}
+
+.splash_word {
+  width: 200px;
+  font-family: cursive;
+  border: 2px solid green;
+  border-top-left-radius: 30px;
+  border-right: none;
+  border-bottom: none;
+  border-style: dashed;
+  border-top-width: 20px;
+  border-bottom-width: 10px;
+  border-right-width: 5px;
+}
+
+.splash_links {
+  flex-direction: column;
+  width: 100%;
+  height: 25vh;
+}
+
+.login_form {
+  width: 99%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #f4f5f5;
+  align-items: center;
+}
+
+.login {
+  width: 100%;
+  height: 10vh;
+  text-decoration: none;
+  background: #3778c2;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.signup {
+  width: 100%;
+  height: 10vh;
+  text-decoration: none;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #434b54;
+}
+
+.sha {
+  color: #434b54;
+}
+
+.login_header {
+  width: 98%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3778c2;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login_container {
+  width: 98%;
+  padding: 10px;
+  background: white;
+  margin-bottom: 20px;
+}
+
+.login_filed {
+  width: 100%;
+  height: 5vh;
+  border: none;
+  font-size: 20px;
+  border-radius: 20px 0 20px 0;
+  padding: 10px;
+}
+
+.forgot_link {
+  text-align: center;
+}
+
+.logged_in_user_form {
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #3778c2;
+  color: white;
+  height: 8vh;
+  padding: 10px;
+}
+
+.logout {
+  border: none;
+  background: #3778c2;
+  color: white;
+}
+
+.page_body {
+  background: #f4f5f5;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category_cont {
+  display: flex;
+  width: 90%;
+  height: 9vh;
+  background: white;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.category_image {
+  width: 90px;
+  height: 100%;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.cat_cont2 {
+  width: 85%;
+  height: 98%;
+}
+
+.cat_cont_det {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 50%;
+}
+
+.cat_time {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 50%;
+}
+
+.add_txn,
+.add_txn_link,
+.add_button_cont,
+.add_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add_button_cont,
+.add_txn {
+  background: green;
+  width: 100%;
+  height: 10vh;
+}
+
+.add_button {
+  width: 95%;
+  height: 70%;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+}
+
+.cat_txn_page {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4vh;
+  padding: 0 10px 0 10px;
+}
+
+.expense_partial {
+  width: 100%;
+  height: 100%;
+}
+
+.expense_det {
+  display: flex;
+  justify-content: space-between;
+  height: 60%;
+  align-items: center;
+}
+
+.expense_date {
+  display: flex;
+  justify-content: space-between;
+  height: 30%;
+  align-items: flex-end;
+}
+
+.add_txn_link {
+  width: 95%;
+  height: 70%;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+}
+
+.form {
+  padding: 10px;
+}
+
+.category_select {
+  width: 40%;
+  height: 30px;
+}
+
+.close-button,
+.menu {
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f9f9f9;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  width: 50vw;
+  height: 100vh;
+}
+
+.menu-content a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-content a:hover {
+  background: #f1f1f1;
+}

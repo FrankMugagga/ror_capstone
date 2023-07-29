@@ -1,0 +1,31 @@
+<section class='logged_in_user_form'>
+
+
+<nav class='navbar'>
+    <div>
+    <%= link_to 'Back', category_path(@category) %>
+    </div>
+
+    <h1>NEW TRANSACTION</h1>
+
+    <div>Search</div>
+  </nav>
+
+  <%= form_with model: @expense, url: category_expenses_path(@category), method: :post, local: true, class:'form' do |f| %>
+    <%= f.label :name, style: 'display:none' %>
+    <%= f.text_field :name, required: true, placeholder:'Name', class:'login_filed' %>
+    <hr>
+
+    <%= f.label :amount, style: 'display:none' %>
+    <%= f.text_field :amount, required: true, placeholder:'Amount', class:'login_filed' %>
+    <hr>
+    <br>
+
+    <%= f.label :category_id %>
+    <%= f.select :category_id, current_user.categories.all.map { |category| [category.name, category.id] }, {}, class:'category_select' %>
+    <br>
+    <br>
+
+    <%= f.submit "Create expense", class:'login_filed' %>
+  <% end %>
+</section>

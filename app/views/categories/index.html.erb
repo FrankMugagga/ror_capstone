@@ -1,0 +1,53 @@
+<% if user_signed_in? %>
+
+<section class='logged_in_user_form'>
+
+  <nav class='navbar'>
+    <div class='menu' onclick='toggleMenu()'> menu</div>
+    <h1>CATEGORIES</h1>
+
+    <% if user_signed_in? %>
+      <%= button_to 'Log Out', destroy_user_session_path, method: :delete, class:'logout' %> 
+    <% end %>
+  </nav>
+
+  <ul class='page_body'>
+
+  <% if @categories.empty? %>
+    <li>
+    <%= link_to 'New CATEGORY', new_category_path, class:'add_button' %>
+    </li>
+  <% end %>
+
+    <% @categories.each do |category| %> 
+      <li class='category_cont'>
+        <%=render partial: 'partials/category', locals: { category: category, author: @user } %>
+      </li>  
+      <br> 
+    <% end %>
+  </ul>
+
+  <div class='add_button_cont'>
+    <%= link_to 'New CATEGORY', new_category_path, class:'add_button' %>
+  </div>
+
+  <div id='menuContent' class='menu-content'>
+  <span class="close-button" onclick="closeMenu()">x</span>
+    <%= button_to 'Log Out', destroy_user_session_path, method: :delete, class:'logout' %> 
+  </div>
+</section>
+
+<script>
+function toggleMenu() {
+  var menuContent = document.getElementById('menuContent');
+    menuContent.style.display = 'block';
+}
+function closeMenu() {
+    var menuContent = document.getElementById('menuContent');
+    menuContent.style.display = 'none';
+  }
+
+
+</script>
+
+<% end %>
