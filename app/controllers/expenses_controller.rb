@@ -10,12 +10,9 @@ class ExpensesController < ApplicationController
     @expense.author = current_user
     @category = Category.find(expense_params[:category_id])
 
-    # @category.id = expense_params[:category_id]
-
     if @expense.save
       @category.expenses << @expense
       redirect_to category_path(expense_params[:category_id]), notice: 'Expense was successfully created'
-      puts "Category id: #{expense_params[:category_id]}"
     else
       puts @expense.errors.full_messages
       flash.now[:error] = @expense.errors.full_messages.to_sentence
