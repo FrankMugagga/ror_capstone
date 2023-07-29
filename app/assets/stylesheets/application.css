@@ -264,3 +264,30 @@ a {
   width: 40%;
   height: 30px;
 }
+
+.close-button,
+.menu {
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  width: 50vw;
+  height: 100vh;
+}
+
+.menu-content a{
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-content a:hover {
+  background: #f1f1f1;
+}

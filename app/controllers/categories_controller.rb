@@ -6,7 +6,7 @@ class CategoriesController < ApplicationController
 
   def show
     @user = current_user
-    # @category = @user.categories.includes(:author).find(params[:id])
+    
     @category = @user.categories.includes(:author, :expenses).find(params[:id])
 
     render :show
@@ -38,10 +38,6 @@ class CategoriesController < ApplicationController
       @category.errors.full_messages
     end
   end
-
-  def edit; end
-
-  def update; end
 
   def category_param
     params.require(:category).permit(:name, :icon, :author_id)

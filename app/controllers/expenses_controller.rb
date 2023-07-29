@@ -1,17 +1,8 @@
 class ExpensesController < ApplicationController
   before_action :set_category
-
-  def index
-    # Your index action code here, if needed.
-  end
-
   def new
     @user = current_user
     @expense = @category.expenses.new
-  end
-
-  def show
-    # Your show action code here, if needed.
   end
 
   def create
