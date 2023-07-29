@@ -2,8 +2,11 @@
 
 <div class='login_header'> 
   <div>
-    <%= link_to 'Back', '/' %>
-  </div>
+    <%= link_to '/' do %>
+      <i class="fas fa-arrow-left"></i>
+    <% end %>
+  </div>  
+
   <h2>LOGIN</h2>
   <div>  
     <%= link_to "Log in", new_session_path(resource_name), class: 'login' %><br />   
@@ -15,7 +18,7 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), html:{ class: 'login_container' }) do |f| %>
   <div class="field">
     <%= f.label :email, style: 'display:none' %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'login_filed', placeholder: 'Email' %>
+    <%= f.email_field :email,  autofocus: true, autocomplete: "email", class: 'login_filed', placeholder: 'Email' %>
   </div>
 
   <hr>
@@ -31,6 +34,7 @@
     <%= f.label :remember_me %>
   </div>
 <% end %>
+<br>
 
 <div class="actions">
   <%= f.submit "Log in" %>

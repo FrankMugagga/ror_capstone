@@ -12,13 +12,12 @@
   <div class='cat_txn_page'>
     <div><%= @category.name %></div>
     <div><%= @category.expenses.sum(:amount) %></div>
-
+ 
   </div>
-
   <ul class='page_body'>
   <% @category.expenses.order(created_at: :desc).each do |expense| %>
     <li class='category_cont'>
-    <%= render partial: 'partials/expense', locals: { expense: expense } %>
+    <%= render partial: 'partials/expense', locals: { expense: expense, category: @category } %>
   </li>
 <% end %>
 </ul>
