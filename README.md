@@ -69,7 +69,7 @@
 
 ## Video demo <a name="live-demo"></a>
 
-- [video Link](https://www.loom.com/share/06f900743dc246f7be1a85901437a160?sid=4d430962-c3b2-4f55-a0c9-f8ccf1c587cf)
+- [video Link](https://www.loom.com/share/a5c523e473ac45ce930bc27b6d60d584?sid=6522c71a-1345-41a9-9902-4dcaf6d3dcd6)
 
 <!-- GETTING STARTED -->
 
