@@ -35,7 +35,8 @@ body {
   background: #f4f5f5;
 }
 
-.login_signup,
+.signup,
+.login,
 .splash_links,
 .spalsh_title {
   display: flex;
@@ -46,6 +47,24 @@ body {
 .spalsh_title {
   width: 100%;
   height: 70vh;
+  font-size: 80px;
+}
+
+.firstl {
+  color: green;
+}
+
+.splash_word {
+  width: 200px;
+  font-family: cursive;
+  border: 2px solid green;
+  border-top-left-radius: 30px;
+  border-right: none;
+  border-bottom: none;
+  border-style: dashed;
+  border-top-width: 20px;
+  border-bottom-width: 10px;
+  border-right-width: 5px;
 }
 
 .splash_links {
@@ -64,18 +83,28 @@ body {
   align-items: center;
 }
 
-.login_signup {
+.login {
   width: 100%;
   height: 10vh;
   text-decoration: none;
-  border: 2px solid #3778c2;
+  background: #3778c2;
   border-radius: 10px;
   margin-bottom: 10px;
+  color: white;
 }
 
-.login_signup:hover {
-  background: #3778c2;
-  color: white;
+.signup {
+  width: 100%;
+  height: 10vh;
+  text-decoration: none;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #434b54;
+}
+
+.sha {
+  color: #434b54;
 }
 
 .login_header {
@@ -92,10 +121,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-.login {
-  color: white;
 }
 
 .login_container {
@@ -160,10 +185,6 @@ a {
   border-radius: 10px;
 }
 
-.category_cont:hover {
-  border: 2px solid #5fb523;
-}
-
 .category_image {
   width: 90px;
   height: 100%;
@@ -199,9 +220,11 @@ a {
   align-items: center;
 }
 
-.add_button_cont {
+.add_button_cont,
+.add_txn {
+  background: green;
+  width: 100%;
   height: 10vh;
-  background: #434b54;
 }
 
 .add_button {
@@ -210,22 +233,6 @@ a {
   border: 2px solid white;
   border-radius: 10px;
   color: white;
-}
-
-.add_txn {
-  background: green;
-  width: 100%;
-  height: 10vh;
-}
-
-.add_txn:hover,
-.add_button_cont:hover {
-  background: #dde1e6;
-}
-
-.add_button:hover {
-  border: 2px solid #5fb523;
-  background: #5fb523;
 }
 
 .cat_txn_page {
@@ -261,10 +268,6 @@ a {
   border: 2px solid white;
   border-radius: 10px;
   color: white;
-}
-
-.add_txn_link:hover {
-  background: #3778c2;
 }
 
 .form {
